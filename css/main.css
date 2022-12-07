@@ -1,0 +1,12 @@
+.heads{
+    display: flex;
+    flex-direction: column;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+}
+.element{
+    background-color: aqua;
+    border: solid;
+}
