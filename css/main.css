@@ -5,12 +5,11 @@
 }
 #container{
     margin: auto;
-    height: 50vh;
-    width: 50vh;
+    height: 60vh;
+    width: 60vh;
     display: flex;
     flex-direction: column;
 }
 .element{
-    border: solid;
     flex:1;
 }
