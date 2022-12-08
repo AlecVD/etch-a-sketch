@@ -1,12 +1,16 @@
 .heads{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex:1;
 }
 #container{
+    margin: auto;
+    height: 50vh;
+    width: 50vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .element{
-    background-color: aqua;
     border: solid;
+    flex:1;
 }
