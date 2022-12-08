@@ -1,25 +1,33 @@
 var container = document.getElementById("container")
-var rows = 16
-var columns = 16
-
-for(var i = 0; i < rows; i++){
-    var row = document.createElement("div")
-    row.classList.add("heads")
-    row.style.borderLeft = "solid"
-    row.style.borderRight = "solid"
-    if(i == 0){
-        row.style.borderTop = "solid"
-    }else if(i == (rows-1)){
-        row.style.borderBottom = "solid"
+container.addEventListener("click",function(){
+    var x = -1
+    while(!(x > 0 && x< 1000)){
+        x = prompt("Input Size")
     }
-    for(var j = 0; j < columns; j++){
-        var element = document.createElement("div")
-        var index = j
-        element.classList.add("element")
-        element.addEventListener("mouseover",changeColor)
-        row.append(element)
+    container.innerHTML = ''
+    createGrid(x)
+})
+createGrid(16)
+function createGrid(size){
+    for(var i = 0; i < size; i++){
+        var row = document.createElement("div")
+        row.classList.add("heads")
+        row.style.borderLeft = "solid"
+        row.style.borderRight = "solid"
+        if(i == 0){
+            row.style.borderTop = "solid"
+        }else if(i == (size-1)){
+            row.style.borderBottom = "solid"
+        }
+        for(var j = 0; j < size; j++){
+            var element = document.createElement("div")
+            var index = j
+            element.classList.add("element")
+            element.addEventListener("mouseover",changeColor)
+            row.append(element)
+        }
+        container.appendChild(row)
     }
-    container.appendChild(row)
 }
 
 function changeColor(e){
