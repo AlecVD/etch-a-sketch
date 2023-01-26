@@ -21,7 +21,6 @@ function createGrid(size){
         }
         for(var j = 0; j < size; j++){
             var element = document.createElement("div")
-            var index = j
             element.classList.add("element")
             element.addEventListener("mouseover",changeColor)
             row.append(element)
@@ -35,4 +34,8 @@ function changeColor(e){
     var g = Math.floor(Math.random() * 256)
     var b = Math.floor(Math.random() * 256)
     e.target.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+}
+
+function reset(){
+    document.getElementById("container").style.backgroundColor = "rgb(0,0,0)"
 }
